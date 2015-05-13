@@ -3,6 +3,7 @@
  */
 package de.flexguse.demo;
 
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -19,6 +20,7 @@ import de.flexguse.demo.service.impl.HelloServiceTestImpl;
  *
  */
 @Configuration
+@EnableAutoConfiguration
 @EnableWebMvcSecurity
 public class SpringBootIntegrationDemoApplicationTestConfiguration extends
 	WebSecurityConfigurerAdapter {

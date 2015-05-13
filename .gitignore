@@ -1,5 +1,8 @@
-/.project
-/.settings
-/bin
-/target
+/bin/
+/target/
 /.classpath
+/.project
+/.settings/org.eclipse.core.resources.prefs
+/.settings/org.eclipse.jdt.core.prefs
+/.settings/org.eclipse.m2e.core.prefs
+/.settings/org.sonar.ide.eclipse.core.prefs

@@ -10,7 +10,6 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.annotation.web.servlet.configuration.EnableWebMvcSecurity;
 
-import de.flexguse.demo.controller.SpringBootIntegrationController;
 import de.flexguse.demo.service.HelloService;
 import de.flexguse.demo.service.impl.HelloServiceImpl;
 
@@ -30,16 +29,11 @@ public class SpringBootIntegrationDemoApplicationConfiguration extends
 	return new HelloServiceImpl();
     }
 
-    @Bean
-    public SpringBootIntegrationController controller() {
-	return new SpringBootIntegrationController();
-    }
-
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 	http.csrf().disable().authorizeRequests()
 		.antMatchers(HttpMethod.GET, "/helloWorld")
-		.hasIpAddress("192.168.1.1").anyRequest().authenticated();
+		.hasIpAddress("127.0.0.1").anyRequest().authenticated();
     }
 
 }
